@@ -106,7 +106,7 @@ func (c *Client) Send(entry model.NotifEntry) error {
 
 	disableNotification := false
 	if c.cfg.DisableNotification != nil {
-		disableNotification = true
+		disableNotification = *c.cfg.DisableNotification
 	}
 
 	for _, cid := range parsedChatIDs {
